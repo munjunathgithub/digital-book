@@ -1,0 +1,31 @@
+<h1>Reader</h1>
+
+<div id="box">
+    <h3 style="text-align: center;">Search Books</h3>
+    <div id="items">
+      <br>
+      <div class="form-floating mb-3">
+        <input type="text" [(ngModel)]=book.category  class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Category</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" [(ngModel)]=book.authorName  class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Author</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="number" [(ngModel)]=book.price  class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Price</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" [(ngModel)]=book.publisher  class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Publisher</label>
+      </div>
+      <br>
+      <button type="button" (click)="saveBook()" style="margin-bottom: 20px;" class="btn btn-success">Search</button>
+    </div>
+  
+  </div>
+  
+  <br>
+  <br>
+  

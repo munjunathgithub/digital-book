@@ -1,0 +1,82 @@
+<div id="box">
+  <h3 style="text-align: center;">Search Books</h3>
+  <div id="items">
+    <br>
+    <div class="form-floating mb-3">
+      <input type="text" [(ngModel)]=book.category  class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Category</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" [(ngModel)]=book.authorName  class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Author</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="number" [(ngModel)]=book.price  class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Price</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" [(ngModel)]=book.publisher  class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Publisher</label>
+    </div>
+    <br>
+    <button type="button" (click)="search()" style="margin-bottom: 20px;" class="btn btn-success">Search</button>
+  </div>
+
+</div>
+
+<br>
+<br>
+
+  <div *ngIf="listBook.length>0">
+  <h3 style="text-align: center;">List of Books</h3>
+  <br>
+  <div id="items">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <!-- <th scope="col">Id</th> -->
+          <th scope="col">Image</th>
+          <th scope="col">Title</th>
+          <th scope="col">Category</th>
+          <th scope="col">Price</th>
+          <th scope="col">Publisher</th>
+          <th scope="col">Active</th>
+          <th scope="col">Author Name</th>
+          <th scope="col">Publish Date</th>
+          <th scope="col">Content</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let book of listBook;index as i">
+        <tr>
+          <td>
+            <img src={{book.image}} style="width: 60px;height: 60px;">
+          </td>
+          <td>
+            {{book.title}}
+          </td>
+          <td>
+            {{book.category}}
+          </td>
+          <td>
+            {{book.price}}
+          </td>
+          <td>
+            {{book.publisher}}
+          </td>
+          <td>
+            {{book.active}}
+          </td>
+          <td>
+            {{book.authorName}}
+          </td>
+          <td>
+            {{book.publishDate|date}}
+          </td>
+          <td>
+            {{book.content}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

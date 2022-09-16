@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div id="box">
+                <h3 style="text-align: center;">Login</h3>
+                <div id="items">
+                    <div class="form-floating mb-3">
+                        <input type="email" [(ngModel)]=auth.email  class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="password" [(ngModel)]=auth.passWord class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                      </div>
+                      <br>
+                        <button class="btn btn-success" (click)="checkLogin()"  style="margin-bottom: 10px;" type="button">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

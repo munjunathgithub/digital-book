@@ -1,0 +1,48 @@
+<div id="box">
+    <h3 style="text-align: center;">Create Books</h3>
+    <div id="items">
+          <br>
+          <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]=book.title  class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]=book.category  class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Category</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]=book.image  class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Image</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" [(ngModel)]=book.price  class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Price</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]=book.publisher  class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Publisher</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="date" [(ngModel)]=book.publishDate  class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Publisher Date</label>
+          </div>
+          <!-- <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]=book.active  class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Active</label>
+          </div> -->
+          <div class="form-floating">
+            <select class="form-select" [(ngModel)]=book.active  id="floatingSelect" aria-label="Floating label select example">
+              <option value="active">Active</option>
+              <option value="Inactive">NonActive</option>
+            </select>
+            <label for="floatingSelect">Select active or Inactive</label>
+          </div>
+          <br>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" [(ngModel)]=book.content  class="form-control" id="floatingInput" placeholder="name@example.com" rows="3"></textarea>
+            <label for="floatingInput">Content</label>
+          </div>
+          <button type="button" (click)="saveBook()"  style="margin-bottom: 20px;" class="btn btn-success">save</button>
+        </div>
+        
+</div>

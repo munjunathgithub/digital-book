@@ -1,0 +1,26 @@
+<div id="box">
+    <h3 style="text-align: center;">Create User</h3>
+    <div id="items">
+          <br>
+          <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]=auth.userName  class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">User Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]=auth.email (change)="checkDuplicate()" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating">
+            <select class="form-select" [(ngModel)]=auth.role  id="floatingSelect" aria-label="Floating label select example">
+              <option value="author">Author</option>
+            </select>
+            <label for="floatingSelect">Select Role</label>
+          </div>
+          <br>
+          <div class="form-floating mb-3">
+            <input type="text" [(ngModel)]=auth.passWord  class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Password</label>
+          </div>
+          <button type="button" (click)="createUser()"   style="margin-bottom: 20px;" class="btn btn-success">save</button>
+        </div>
+</div>
